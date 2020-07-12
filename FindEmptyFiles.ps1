@@ -1,0 +1,1 @@
+﻿Get-ChildItem '\\dosk2\cgdocs2' -Recurse | Where-Object {$_.Length -eq 0 -and $_.LastWriteTime.Year -eq '2020' } | select FullName | select-string -List -Pattern '\\\\dosk2\\cgdocs2\\[0-9]+\\[0-9]+\\suppdoc\\.+' | select Line #Where-Object {$_.Length -eq 0 -and $_.LastWriteTime.Year -eq '2020' }
